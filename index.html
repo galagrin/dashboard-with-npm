@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Team Tasks</title>
+        <link
+            rel="stylesheet"
+            href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <button class="theme-toggle-btn btn">Темная/светлая тема</button>
+        <aside>
+            <div class="sidebar">
+                <h2>Страница компании</h2>
+                <!-- Меню -->
+
+                <ul>
+                    <li>Обзор</li>
+                    <li>Команда</li>
+                    <li>Проекты</li>
+                    <li>Отчеты</li>
+                </ul>
+
+                <div class="exchange-rates">
+                    <div class="currency">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h2>USD</h2>
+                        <p class="rate" id="usd-rate"></p>
+                    </div>
+                    <div class="currency">
+                        <i class="fas fa-euro-sign"></i>
+                        <h2>EUR</h2>
+                        <p class="rate" id="eur-rate"></p>
+                    </div>
+                    <div class="currency">
+                        <i class="fas fa-yen-sign"></i>
+                        <h2>CNY</h2>
+                        <p class="rate" id="cny-rate"></p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <!-- Команда -->
+            <h1>Команда</h1>
+
+            <div class="container" id="teamContainer">
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="./assets/junior.jpg" alt="Junior developer" />
+                    </div>
+                    <div class="contentBx">
+                        <h3>Byte</h3>
+                        <p>Junior Frontend Developer</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="./assets/junior1.jpg" alt="Junior1" />
+                    </div>
+                    <div class="contentBx">
+                        <h3>Codey</h3>
+                        <p>Middle Backend Developer</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="./assets/junior2.jpg" alt="Junior2" />
+                    </div>
+                    <div class="contentBx">
+                        <h3>Pixel</h3>
+                        <p>Senior Frontend Developer.</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="./assets/senior.jpg" alt="Senior" />
+                    </div>
+                    <div class="contentBx">
+                        <h3>Compiler</h3>
+                        <p>Senior Backend Developer</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="./assets/senior2.jpg" alt="Senior2" />
+                    </div>
+                    <div class="contentBx">
+                        <h3>Debug</h3>
+                        <p>Team Lead</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Стек проектов -->
+            <div class="stack-container">
+                <h2 class="stack-title">Наш стек</h2>
+                <i class="fab fa-html5 tech-icons" title="HTML5"></i>
+                <i class="fab fa-css3-alt tech-icons" title="CSS3"></i>
+                <i class="fab fa-js-square tech-icons" title="JavaScript"></i>
+                <i class="fab fa-react tech-icons" title="React"></i>
+                <i class="fab fa-angular tech-icons" title="Angular"></i>
+                <i class="fab fa-php tech-icons"></i>
+                <i class="fab fa-python tech-icons"></i>
+                <i class="fab fa-java tech-icons"></i>
+                <i class="fas fa-database tech-icons"></i>
+                <i class="fab fa-cuttlefish tech-icons"></i>
+            </div>
+
+            <!-- Диаграммы задач за месяц -->
+            <h2 class="charts-title">Показатели работы за месяц</h2>
+            <div class="charts-wrap">
+                <div class="chart-container">
+                    <canvas id="totalTasksChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="completedTasksChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="remainingTasksChart"></canvas>
+                </div>
+            </div>
+
+            <section class="doughnut_section">
+                <!-- Диаграмма сегменты -->
+                <div class="doughnut-container">
+                    <h4>
+                        Количество клиентов в разбивке по сегментам за 1
+                        полугодие 2024
+                    </h4>
+                    <canvas id="doughnut-chart"></canvas>
+                </div>
+                <!-- Диаграмма страны -->
+                <div class="country-container">
+                    <h4>География клиентов за 1 полугодие 2024</h4>
+                    <canvas id="country-chart"></canvas>
+                </div>
+            </section>
+        </main>
+        <!-- Скрипты -->
+        <script src="./app.js" type="module"></script>
+        <!-- <script src="app.js"></script> -->
+        <script type="text/javascript" src="./vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".box"), {
+                max: 25,
+                speed: 400,
+            });
+        </script>
+    </body>
+</html>
