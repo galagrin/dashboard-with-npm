@@ -34,4 +34,5 @@ Currency Exchange Rates: Obtained from the Central Bank of Russia's open API htt
 
 -   `app.js`: Main JavaScript file for functionality.
 -   `vanilla-tilt.js`: Used for tilt effects on team member cards.
--   ![Скрин](Screenshot.png)
+
+![Скрин](Screenshot.png)
