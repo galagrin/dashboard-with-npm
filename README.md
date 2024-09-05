@@ -27,7 +27,6 @@ Currency Exchange Rates: Obtained from the Central Bank of Russia's open API htt
 ## Usage
 
 -   Open https://galagrin.github.io/dashboard-with-npm/ in a web browser to view the application.
--   Use the sidebar to navigate through different sections.
 -   Toggle the theme using the button provided.
 
 ## Scripts
